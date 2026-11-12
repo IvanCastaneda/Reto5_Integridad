@@ -67,6 +67,10 @@ else {
     screen.innerHTML=`<section class="panel text-center"><span class="tag">Recorrido completado</span><h2>¡Terminaste el Reto 5!</h2><p>Has revisado las situaciones sobre conflictos de intereses y formulado un compromiso personal.</p><div class="box feedback mt-4"><strong>¡Respuestas enviadas con éxito!</strong><br><br>Gracias por tu participación. Tu información ha sido registrada para consolidar el acta del Jardín Infantil Villa Cristina. Ya puedes cerrar esta ventana.</div></section>`;
 }
 }
+// ESTA ES LA FUNCIÓN QUE SE HABÍA BORRADO
+function feedbackHTML(c,a){
+    return `<div class="box ${a===c.correct?'feedback':'warning'}" role="status"><strong>${a===c.correct?'Decisión adecuada':'Es importante reconsiderar esta alternativa'}</strong><p>${esc(c.feedback)}</p><p><strong>Para reflexionar:</strong> ${esc(c.risk)}</p></div>`;
+}
 
 // Renderizado inicial
 render();
