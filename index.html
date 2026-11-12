@@ -48,7 +48,14 @@ else if(state.step===5){
                 body: JSON.stringify({
                     nombre: state.alias,
                     rol: state.role,
-                    respuestas: "Caso 1: " + state.answers[0] + " | Caso 2: " + state.answers[1] + " | Caso 3: " + state.answers[2] + " | Caso 4: " + state.answers[3],
+                    c1_opcion: cases[0].opts[state.answers[0]],
+                    c1_reflexion: state.notes[0] || "Sin apunte",
+                    c2_opcion: cases[1].opts[state.answers[1]],
+                    c2_reflexion: state.notes[1] || "Sin apunte",
+                    c3_opcion: cases[2].opts[state.answers[2]],
+                    c3_reflexion: state.notes[2] || "Sin apunte",
+                    c4_opcion: cases[3].opts[state.answers[3]],
+                    c4_reflexion: state.notes[3] || "Sin apunte",
                     compromiso: state.commitment
                 })
             });
